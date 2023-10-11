@@ -48,3 +48,32 @@ import lombok.Data;
 // apenas setter
 @Setter
 ```
+
+# Banco
+- spring data jpa 
+  - usa conceito de ORM
+## h2
+- banco de dados em memória
+
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+<dependency>
+  <groupId>com.h2database</groupId>
+  <artifactId>h2</artifactId>
+  <scope>runtime</scope>
+</dependency>
+```
+```env
+# acessar rota console -> localhost:8080/h2-console
+
+spring.datasource.url=jdbc:h2:mem:todolist
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=admin
+spring.datasource.password=admin
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+```
