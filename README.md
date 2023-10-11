@@ -36,3 +36,15 @@
 - Criar rota
   - @RequestMapping("primeiraRota")
   - @GetMapping("/")
+
+# Lombok
+- Facilita getters e setters
+```java
+import lombok.Data;
+// getters e setters para todos atributos
+@Data
+// apenas getter
+@Getter
+// apenas setter
+@Setter
+```
