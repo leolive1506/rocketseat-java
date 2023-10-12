@@ -20,8 +20,10 @@
 - @SpringBootApplication
   - essa anotation define que a classe TodolistApplication é a classe inicial do projeto
 - Modificador -> niveis de acesso (public, private, protected)
-## Objeto  (Model)
-- Model
+- interface define os metodos mas não tem sua implementação
+
+## Response entity
+
 
 ## Controller
 - Um componente
@@ -52,6 +54,27 @@ import lombok.Data;
 # Banco
 - spring data jpa 
   - usa conceito de ORM
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+```
+```java
+@Data
+@Entity(name = "tb_users")
+public class UserModel {
+
+  @Id
+  // Gerar automaticamente
+  @GeneratedValue(generator = "UUID")
+  private UUID id;
+  private String username;
+  private String name;
+  private String password;
+}
+
+```
 ## h2
 - banco de dados em memória
 
