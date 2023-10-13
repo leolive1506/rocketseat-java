@@ -1,4 +1,8 @@
 # [Criar estrutura do projeto spring](https://start.spring.io/)
+# Run app maven
+```sh
+mvn spring-boot:run
+```
 
 # Estrutura
 - target
@@ -99,4 +103,13 @@ spring.datasource.username=admin
 spring.datasource.password=admin
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.h2.console.enabled=true
+```
+
+# devtools (live reload)
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-devtools</artifactId>
+  <optional>true</optional>
+</dependency>
 ```

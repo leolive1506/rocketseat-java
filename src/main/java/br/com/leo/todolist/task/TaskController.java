@@ -41,6 +41,7 @@ public class TaskController {
         .body("A data de início deve ser menor que a data de término");
     }
 
+    // nao é possivel lançar try catch a nivel de metodo, pois quem faz o set dos att é o RequestBody
     var task = this.taskRepository.save(taskModel);
     return ResponseEntity.status(HttpStatus.OK).body(task);
   }
